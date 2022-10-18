@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace SampleStringSplitApplication
     {
         static void Main(string[] args)
         {
-            using (var db = new TestSampleEntities())
+            using (var db = new TestModel())
             {
                 db.Database.Log = Console.WriteLine;
 

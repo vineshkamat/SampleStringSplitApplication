@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace SampleStringSplitApplication
 {
-    public partial class TestSampleEntities
+    public partial class TestModel
     {
         public DbSet<StringSplitResult> StringSplitResults { get; set; }
 
-        [DbFunction(nameof(TestSampleEntities), nameof(String_split))]
+        [DbFunction(nameof(TestModel), nameof(String_split))]
         [DbFunctionDetails(IsBuiltIn = true)]
         public IQueryable<StringSplitResult> String_split(string source, string separator)
         {
